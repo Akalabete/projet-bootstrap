@@ -34,14 +34,15 @@
   <!-- moitié texte moitié image -->
             <div class="container">
   <!-- utilisation du systeme de grille -->   
-                <div class="row">
-                    <div class="col">
-                        <h1>Alexandre LACOUR Developpeur/Designer web junior</h1>
-                        <h2>Portfolio de test</h2>
-                        <button>Mon expertise web</button>
-                        <button>Me contacter</button>
+                <div class="row gy-4 gy-md-0">
+                    <div class="col-12 col-md-6">
+   <!-- ajout des spécificité bs5 sur la police --> 
+                        <h1 class="fw-bold">Alexandre LACOUR Developpeur/Designer web junior</h1>
+                        <h2 class="fw-light">Portfolio de test</h2>
+                        <button type="button" class="btn btn-warning">Mon expertise web</button>
+                        <button type="button" class="btn btn-success">Me contacter</button>
                     </div>
-                    <div class="col">                     
+                    <div class="col-12 col-md-6">                     
   <!-- ajout de la photo à changer -->                        
                         <img src="../votreDossier/img/portrait.jpg" alt="photo a changer" class="w-100">
                     </div>
@@ -50,27 +51,31 @@
         </section>
         <section class="py-5 bg-light">
             <div class="container">    
-                <h2>Experience</h2>
-                <h3>Développement et Design</h3>       
+                <h2 class="fw-bold">Experience</h2>
+                <h3 class="fw-light">Développement et Design</h3>       
             </div>
                 <div class="container">
-                    <div class="row mt-5">
-                        <div class="col-8">
-                            <div class="bg-secondary h-100 w-100">
+   <!-- Utilisation de g pour réguler l'espace entre les colonnes fonctionne comme margin m -->                  
+                    <div class="row gy-4 mt-5">
+                        <div class="col-12 col-md-7">
+                            <div class="bg-secondary h-100 w-100 py-5">
                             </div>
                         </div>    
-                            <div class="col-4">
-                                   <img src="../votreDossier/img/code.jpg" alt="cadredroitsection2" class="w-100">
-                            </div>
+   <!-- Utilisation d'offset pour pousser d'une colonne vers la droite sur vrsion md -->                      
+   <!-- mais j ai perdu mon carré gris du coup obligé d'ajouter ??? => réglé avec py-5 marge abcisse-->  
+   <!-- mise a jour du code avec py-5 sur tous les espaces gris vide  youpi ca marche-->   
+                        <div class="col-12 offset-md-1 col-md-4">
+                            <img src="../votreDossier/img/code.jpg" alt="cadredroitsection2" class="w-100">
+                        </div>
                     </div>
                 </div>
                 <div class="container">
-                    <div class="row mt-5">
-                        <div class="col-4">
+                    <div class="row gy-4 mt-5">
+                        <div class="col-12 col-md-4">
                             <img src="../votreDossier/img/design.jpg" alt="cadredroitsection2" class="w-100">
                         </div>    
-                            <div class="col-8">
-                                <div class="bg-secondary h-100 w-100">
+                            <div class="col-12 offset-md-1 col-md-7">
+                                <div class="bg-secondary h-100 w-100 py-5">
                                 </div>
                             </div>
                         </div>
@@ -79,31 +84,29 @@
             </div>
         </section>
 
-        <section class="py-5 bg-light">
+        <section class="py-5">
             <div class="container">
-                <h2>PORTFOLIO</h2>
-                <h3>Projets divers</h3>
-                <button>réalisations personnelles</button>                    <button>pour les pros</button>
-            </div>
-            <div class="container">
-                <div class="row mt-5">
-                    <div class="col">
-                        <div class="bg-secondary h-100 w-100">
-                            je suis ici
+                <h2 class="fw-bold">PORTFOLIO</h2>
+                <h3 class="fw-light">Projets divers</h3>
+                <button type="button" class="btn btn-info">réalisations personnelles</button>  
+                <button type="button" class="btn btn-primary">pour les pros</button>
+            
+                <div class="container">
+                    <div class="row gy-4 mt-5">
+                       <div class="col-3">
+                           <div class="bg-secondary h-100 w-100 py-5">
+                           </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="bg-secondary h-100 w-100">
-                            je suis la
-                        </div>                        </div>
-                        <div class="col">
-                            <div class="bg-secondary h-100 w-100">
-                                je suis encore la
+                        <div class="col-3">
+                            <div class="bg-secondary h-100 w-100 py-5">
+                            </div>                        </div>
+                            <div class="col-3">
+                                <div class="bg-secondary h-100 w-100 py-5">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="bg-secondary h-100 w-100">
-                                je suis toujours la
+                            <div class="col-3">
+                                <div class="bg-secondary h-100 w-100 py-5">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -112,37 +115,44 @@
         </section>
            <section class="py-5 bg-light">
                <div class="container">
-               <h2>Vos envies:</h2>
-               <h3>notre collaboration !</h3>
-            </div>
-            <div class="container">
-                <div class="row mt-5">
-                   <div class="col-5">
-                        <img src="../votreDossier/img/grab-a-coffee.jpg" alt="hmmmticafé" class="w-100">
-                    </div>
-                    <div class="col-7">
-                        <div class="bg-secondary h-100 w-100">
+               <h2 class="fw-bold">Vos envies:</h2>
+               <h3 class="fw-light">notre collaboration !</h3>
+                    <div class="container">
+                        <div class="row gy-4 mt-5">
+                            <div class="col-12 col-md-5">
+                                <img src="../votreDossier/img/grab-a-coffee.jpg" alt="hmmmticafé" class="w-100">
+                            </div>
+                            <div class="col-12 offset-md-1 col-md-6">
+                                <div class="bg-secondary h-100 w-100 py-5">
+                            </div>
                         </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
-        <div class="container">
-            <div class="row my-5">
-                <div class="col">
-                    <div class="bg-secondary h-100 w-100">
-                        once again
+    <footer class="border-top">
+        <div class="container py-5">
+            <div class="row gy-4">
+                <div class="col-12 col-md-4">
+                    <div class="bg-secondary h-100 w-100 py-5">
                     </div>
                 </div>
-                <div class="col">
-                    <div class="bg-secondary h-100 w-100">
-                        upon
+                <div class="col-12 col-md-4">
+                    <div class="bg-secondary h-100 w-100 py-5">
                     </div>
                 </div>
-                <div class="col">
-                    <div class="bg-secondary h-100 w-100">
-                        a time
+                <div class="col-12 col-md-4">
+   <!-- suppression fond gris, ajout du boutton linkedin et alignement des éléments par la droite -->                 
+                    <div class="py-5">
+                        <p class="text-end">
+                            <a href=”mon lien linkedin” target=”_blank”></a>
+                                <i class="bi bi-linkedin"></i>
+                            <a href=”mon lien linkedin” target=”_blank”></a>
+                                <i class="bi bi-instagram"></i>
+                        </p>
+                        
+                        </a>
                     </div>
                 </div>
             </div>
