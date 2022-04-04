@@ -15,32 +15,50 @@
   <script src="https://kit.fontawesome.com/14273d579a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-  <!-- class utilitaire + bg pour proprieté spécifique-->       
-        <nav class="bg-light">
-  <!-- containeur éléments barre de nav -->
-            <div class="container">
-  <!-- autre propriétés py pour le padding et w-100 pour la taille élément parent-->       
-                <div class="bg-secondary py-4 w-100">
-
-                </div>
+    <header class="py-4">
+  <!-- navbar 3.0 avec reutil span et du code couleur page-->       
+    <nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-uppercase fw-bold" href=".../index.html">
+                <span class="bg-primary bg-gradient p-1 rounded-3 text-light">Alexandre</span> LACOUR
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#AlexandreLACOUR">Qui suis-je ?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#expertises">Expertises</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
             </div>
-
-        </nav>
+        </div>
+    </nav>
     </header>
     <main>
   <!-- ajout d'une classe à la section pour le margin haut bas -->
-        <section class="my-5">
+        <section id="AlexandreLACOUR" class="my-5">
   <!-- moitié texte moitié image -->
             <div class="container">
   <!-- utilisation du systeme de grille -->   
-                <div class="row gy-4 gy-md-0">
+                <div class="row gy-4 align-items-center">
                     <div class="col-12 col-md-6">
-   <!-- ajout des spécificité bs5 sur la police --> 
+  <!-- ajout des spécificité bs5 sur la police --> 
                         <h1 class="fw-bold">Alexandre LACOUR Developpeur/Designer web junior</h1>
                         <h2 class="fw-light">Portfolio de test</h2>
-                        <button type="button" class="btn btn-warning">Mon expertise web</button>
-                        <button type="button" class="btn btn-success">Me contacter</button>
+  <!-- transformation du bouton expertise en ancre pour tout les liens # du portfolio --> 
+                        <a href="#expertise" class="btn btn-warning mt-5">Mon expertise web</a>
+  <!-- second pointer vers le formulaire de contact à finir -->                     
+                        <a href="#contact" class="btn btn-success mt-5">Me contacter</a>
                     </div>
                     <div class="col-12 col-md-6">                     
   <!-- ajout de la photo à changer -->                        
@@ -49,17 +67,31 @@
                 </div>
             </div>          
         </section>
-        <section class="py-5 bg-light">
+        <section id="expertises" class="py-5 bg-light">
             <div class="container">    
-                <h2 class="fw-bold">Experience</h2>
+                <h2 class="fw-bold text-uppercase">compétences acquises</h2>
                 <h3 class="fw-light">Développement et Design</h3>       
             </div>
                 <div class="container">
    <!-- Utilisation de g pour réguler l'espace entre les colonnes fonctionne comme margin m -->                  
                     <div class="row gy-4 mt-5">
                         <div class="col-12 col-md-7">
-                            <div class="bg-secondary h-100 w-100 py-5">
-                            </div>
+   <!-- ajout de la progressbar & variation perso -->                         
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
                         </div>    
    <!-- Utilisation d'offset pour pousser d'une colonne vers la droite sur vrsion md -->                      
    <!-- mais j ai perdu mon carré gris du coup obligé d'ajouter ??? => réglé avec py-5 marge abcisse-->  
@@ -84,12 +116,12 @@
             </div>
         </section>
 
-        <section class="py-5">
+        <section id="portfolio" class="py-5">
             <div class="container">
-                <h2 class="fw-bold">PORTFOLIO</h2>
+                <h2 class="fw-bold text-uppercase">portfolio</h2>
                 <h3 class="fw-light">Projets divers</h3>
-                <button type="button" class="btn btn-info">réalisations personnelles</button>  
-                <button type="button" class="btn btn-primary">pour les pros</button>
+                <a href="#portfolio" class="btn btn-info mt-5">réalisations perso</a>  
+                <a href="#portfolio" class="btn btn-primary mt-5">pour les pros</a>
             
                 <div class="container">
                     <div class="row gy-4 mt-5">
@@ -113,10 +145,10 @@
                 </div>
             </div>
         </section>
-           <section class="py-5 bg-light">
+           <section id="contact" class="py-5 bg-light">
                <div class="container">
-               <h2 class="fw-bold">Vos envies:</h2>
-               <h3 class="fw-light">notre collaboration !</h3>
+               <h2 class="fw-bold text-uppercase">vos envies :</h2>
+               <h3 class="fw-light">Notre collaboration !</h3>
                     <div class="container">
                         <div class="row gy-4 mt-5">
                             <div class="col-12 col-md-5">
@@ -133,24 +165,39 @@
     </main>
     <footer class="border-top">
         <div class="container py-5">
-            <div class="row gy-4">
+   <!-- centrage de la row au milieu-->         
+            <div class="row gy-4 align-item-center">
                 <div class="col-12 col-md-4">
-                    <div class="bg-secondary h-100 w-100 py-5">
-                    </div>
+   <!-- utilisation de la classe navbar pour relier à la présao et de span(badge en evidence lié
+     au style du parent cad du reste de la ligne ie l'encadrement Alexandre à custom)-->                 
+                    <a class="navbar-brand text-dark text-uppercase fw-bold" href="#">
+                        <span class="bg-primary bg-gradient p-1 rounded-3 text-light">Alexandre</span> LACOUR
+                    </a>
                 </div>
-                <div class="col-12 col-md-4">
-                    <div class="bg-secondary h-100 w-100 py-5">
-                    </div>
+   <!-- suivi de la correction ajout d'une liste d'un élément, prob pr suivre la mme mise en page-->             
+                <div class="col-12 col-md-4 text-md-center">
+                    <ul class="list-unstyled mb=0">
+                        <li>
+                            <a href="#" class="text-decoration-none text-dark">Mentions légales</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="col-12 col-md-4">
-   <!-- suppression fond gris, ajout du boutton linkedin et alignement des éléments par la droite -->                 
-                    <div class="py-5">
-                        <p class="text-end">
-                            <a href=”mon lien linkedin” target=”_blank”></a>
-                                <i class="bi bi-linkedin"></i>
-                            <a href=”mon lien linkedin” target=”_blank”></a>
-                                <i class="bi bi-instagram"></i>
-                        </p>
+   <!-- ajout de l'alignement dans la div, suppr de l'alignement et de <p> rempl par li-->             
+                <div class="col-12 col-md-4 text-md-end">
+                    <ul class="list-inline item">
+                        <li class="list-inline-item">    
+                            <a href="#" class="text-decoration-none text-dark" >
+                                <i class="bi bi-linkedin"></i></a>
+                        </li>
+                        <li class="list-inline-item">    
+                            <a href="#" class="text-decoration-none text-dark">
+                                <i class="bi bi-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item">    
+                            <a href="#" class="text-decoration-none text-dark">
+                                <i class="bi bi-instagram"></i></a>
+                        </li>
+                    </ul>
                         
                         </a>
                     </div>
